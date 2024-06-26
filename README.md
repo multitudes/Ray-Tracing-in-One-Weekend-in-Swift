@@ -102,7 +102,7 @@ Then I have two initializers and the getters for clarity.
 ```swift
 struct Vec3 {
 
-    var e: [Double]
+	var e: [Double]
 
 	init(x: Double, y: Double, z: Double) {
 		e = [x, y, z]
@@ -116,6 +116,7 @@ struct Vec3 {
 		return e[0]
 	}
 	...
+}
 ```
 Struct in Swift are not mutable by default.  
 Operator overloading is not a problem.  Here is how it is done. The `inout` keyword 

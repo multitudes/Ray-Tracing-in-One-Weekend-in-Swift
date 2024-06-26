@@ -1,8 +1,8 @@
 # Ray-Tracing-in-One-Weekend-in-Swift
 Raytracer explorations based on the popular series 
 
-
-This is the Swift version. I did a C version here: [Ray-Tracing-in-One-Weekend-in-C](()
+I am following the tutorials in [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html) but writing the code in Swift for good practice.  
+I did a C version here: [Ray-Tracing-in-One-Weekend-in-C](()
 
 ## set up
 It is possible but now usual to run swift from a makefile. Instead, for this project I will create a swift package.
@@ -89,6 +89,10 @@ struct raytracinginaweekend {
   }
 }
 ```
+This is the result:
+<div style="text-align: center;">
+<img src="assets/hello.png" alt="hello world" style="width: 50%;display: inline-block;" />
+</div>
 
 
 

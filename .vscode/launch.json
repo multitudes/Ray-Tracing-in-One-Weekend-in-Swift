@@ -1,0 +1,28 @@
+{
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"args": [],
+			"cwd": "${workspaceFolder:Ray-Tracing-in-One-Weekend-in-Swift}",
+			"name": "Debug inaweekend",
+			"program": "${workspaceFolder:Ray-Tracing-in-One-Weekend-in-Swift}/.build/debug/inaweekend",
+			"preLaunchTask": "swift: Build Debug inaweekend"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"args": [],
+			"cwd": "${workspaceFolder:Ray-Tracing-in-One-Weekend-in-Swift}",
+			"name": "Release inaweekend",
+			"program": "${workspaceFolder:Ray-Tracing-in-One-Weekend-in-Swift}/.build/release/inaweekend",
+			"preLaunchTask": "swift: Build Release inaweekend"
+		}
+	]
+}

@@ -85,6 +85,7 @@ struct raytracinginaweekend {
 				}
 			}
 		}
+		fileHandle.closeFile()
 	}
   }
 }
@@ -93,6 +94,46 @@ This is the result:
 <div style="text-align: center;">
 <img src="assets/hello.png" alt="hello world" style="width: 50%;display: inline-block;" />
 </div>
+
+## Creating a vector struct
+In Swift we tend to use structs instead of classes. They are cheap and passed by value.
+I will create an array for the components, maybe the peformance is better?
+Then I have two initializers and the getters for clarity.
+```swift
+struct Vec3 {
+
+    var e: [Double]
+
+	init(x: Double, y: Double, z: Double) {
+		e = [x, y, z]
+	}
+
+	init() {
+		e = [0.0, 0.0, 0.0]
+	}
+
+	func x() -> Double {
+		return e[0]
+	}
+	...
+```
+Struct in Swift are not mutable by default.  
+Operator overloading is not a problem.  Here is how it is done. The `inout` keyword 
+is used to pass the parameters by reference. 
+
+```swift
+extension Vec3 {
+	static func + (left: Vec3, right: Vec3) -> Vec3 {
+       return Vec3(x: left.x() + right.x(), y: left.y() + right.y(), z: left.z() + right.z())
+    }
+
+	static func += (left: inout Vec3, right: Vec3) {
+        left = left + right
+    }
+}
+```
+
+
 
 
 

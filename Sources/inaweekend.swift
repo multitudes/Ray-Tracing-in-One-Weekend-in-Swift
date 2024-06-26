@@ -19,6 +19,7 @@ struct raytracinginaweekend {
 			fileHandle.write(headerData)
 		}
 		for j in 0..<image_height {
+			print("Scanlines remaining: \(image_height - j - 1)")
 			for i in 0..<image_width {
 				let r: Double = Double(i) / Double(image_width-1)
 				let g: Double = Double(j) / Double(image_height-1)
@@ -34,6 +35,8 @@ struct raytracinginaweekend {
 				}
 			}
 		}
+		fileHandle.closeFile()
+	    print("Done.")
 	}
   }
 }

@@ -21,18 +21,8 @@ struct raytracinginaweekend {
 		for j in 0..<image_height {
 			print("Scanlines remaining: \(image_height - j - 1)")
 			for i in 0..<image_width {
-				let r: Double = Double(i) / Double(image_width-1)
-				let g: Double = Double(j) / Double(image_height-1)
-				let b: Double = 0.0
-
-				let ir: Int = Int(255.999 * r)
-				let ig: Int = Int(255.999 * g)
-				let ib: Int = Int(255.999 * b)
-
-				let pixel: String = "\(ir) \(ig) \(ib)\n"
-				if let pixel: Data = pixel.data(using: .utf8) {
-					fileHandle.write(pixel)
-				}
+				let pixel_color: Color = Color(Double(i) / Double(image_width-1), Double(j) / Double(image_height-1), 0);
+            	write_color(output: fileHandle, color: pixel_color);
 			}
 		}
 		fileHandle.closeFile()

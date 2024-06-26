@@ -1,4 +1,3 @@
-
 /*
  *  vec3.swift
  *  RayTracer
@@ -10,7 +9,6 @@
  *  since they all have three components, 
  *  we can treat them all as the same type for this exercise
  */ 
-
 import Foundation
 typealias Point = Vec3
 typealias Color = Vec3
@@ -19,7 +17,7 @@ struct Vec3 {
 
     var e: [Double]
 
-	init(x: Double, y: Double, z: Double) {
+	init(_ x: Double, _ y: Double, _ z: Double) {
 		e = [x, y, z]
 	}
 
@@ -40,11 +38,13 @@ struct Vec3 {
 	}
 
 	static prefix func - (_ v: Vec3) -> Vec3 {
-		return Vec3(x: -v.e[0], y: -v.e[1], z: -v.e[2])
+		return Vec3(-v.e[0], -v.e[1], -v.e[2])
 	}
 	
 	static func + (left: Vec3, right: Vec3) -> Vec3 {
-       return Vec3(x: left.x() + right.x(), y: left.y() + right.y(), z: left.z() + right.z())
+       return Vec3(left.x() + right.x(), 
+	   			   left.y() + right.y(), 
+				   left.z() + right.z())
     }
 
 	static func += (left: inout Vec3, right: Vec3) {
@@ -52,7 +52,7 @@ struct Vec3 {
     }
 
 	static func * (left: Vec3, _ t: Double) -> Vec3 {
-	   return Vec3(x: left.x() * t, y: left.y() * t, z: left.z() * t)
+	   return Vec3(left.x() * t, left.y() * t, left.z() * t)
 	}
 
 	static func *= (left: inout Vec3, _ t: Double) {
@@ -60,7 +60,7 @@ struct Vec3 {
 	}
 
 	static func / (left: Vec3, _ t: Double) -> Vec3 {
-	   return Vec3(x: left.x() / t, y: left.y() / t, z: left.z() / t)
+	   return Vec3(left.x() / t, left.y() / t, left.z() / t)
 	}
 
 	static func /= (left: inout Vec3, _ t: Double) {
@@ -80,9 +80,9 @@ struct Vec3 {
 	}
 
 	func cross(_ v: Vec3) -> Vec3 {
-		return Vec3(x: e[1]*v.e[2] - e[2]*v.e[1],
-					y: e[2]*v.e[0] - e[0]*v.e[2],
-					z: e[0]*v.e[1] - e[1]*v.e[0])
+		return Vec3(e[1]*v.e[2] - e[2]*v.e[1],
+					e[2]*v.e[0] - e[0]*v.e[2],
+					e[0]*v.e[1] - e[1]*v.e[0])
 	}
 
 	func unit_vector() -> Vec3 {

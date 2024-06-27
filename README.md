@@ -2,7 +2,7 @@
 Raytracer explorations based on the popular series 
 
 I am following the tutorials in [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html) but writing the code in Swift for good practice.  
-I did a C version here: [Ray-Tracing-in-One-Weekend-in-C](()
+I did a C version here: [Ray-Tracing-in-One-Weekend-in-C]((https://github.com/multitudes/Ray-Tracing-in-One-Weekend-in-C)
 
 ## set up
 It is possible but now usual to run swift from a makefile. Instead, for this project I will create a swift package.

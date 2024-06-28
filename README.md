@@ -4,7 +4,13 @@ Raytracer explorations based on the popular series
 I am following the tutorials in [_Ray Tracing in One Weekend_](https://raytracing.github.io/books/RayTracingInOneWeekend.html) but writing the code in Swift for good practice.  
 I did a C version here: [Ray-Tracing-in-One-Weekend-in-C](https://github.com/multitudes/Ray-Tracing-in-One-Weekend-in-C)
 
-## set up
+Swift has been originally deeloped by Apple for iOS and macOS development. However, it is now open source and can be used on Linux and Windows. What is missing from Swift when used on Linux are the Apple frameworks, especially the foundation frameworks which are like the `stdlib` in C are different on Linux and macOS.  
+As an experiment I would like to keep this repo cross platform and see how far I can get! 
+
+## The set up
+
+If you need to install Swift please see this small guide: [Swift installation](swift.md)
+
 It is possible but now usual to run swift from a makefile. Instead, for this project I will create a swift package.
 ```bash
 swift package init --name inaweekend --type executable

@@ -4,12 +4,12 @@
  *
  *  Created by laurent brusa on 2024/06/25.
  */
+import Foundation
 
 /*
  *  since they all have three components, 
  *  we can treat them all as the same type for this exercise
  */ 
-import Foundation
 typealias Point = Vec3
 typealias Color = Vec3
 
@@ -24,6 +24,9 @@ struct Vec3 {
 	init() {
 		e = [0.0, 0.0, 0.0]
 	}
+}
+
+extension Vec3 {
 
 	func x() -> Double {
 		return e[0]

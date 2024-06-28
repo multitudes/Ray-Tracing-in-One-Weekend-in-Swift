@@ -1,5 +1,9 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+/*
+ *  inaweekend.swift
+ *  RayTracer
+ *
+ *  Created by laurent brusa on 2024/06/25.
+ */
 
 import Foundation
 

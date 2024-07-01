@@ -10,6 +10,7 @@ import Foundation
 @main
 struct raytracinginaweekend {
   static func main() {
+	// let aspect_ratio: Double = 16.0 / 9.0;
     let image_width: Int = 256;
     let image_height: Int = 256;
 	let fileName: String = "test.ppm"

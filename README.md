@@ -144,7 +144,8 @@ extension Vec3 {
 
 
 
-
+## Links
+https://metalkit.org/ray-tracing-in-a-swift-playground/
 
 
 

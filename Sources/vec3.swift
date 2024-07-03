@@ -4,7 +4,7 @@
  *
  *  Created by laurent brusa on 2024/06/25.
  */
- 
+
 import Foundation
 
 /*
@@ -44,6 +44,12 @@ extension Vec3 {
 	static prefix func - (_ v: Vec3) -> Vec3 {
 		return Vec3(-v.e[0], -v.e[1], -v.e[2])
 	}
+
+	static func - (left: Vec3, right: Vec3) -> Vec3 {
+		return Vec3(left.x() - right.x(), 
+	   			    left.y() - right.y(), 
+				    left.z() - right.z())
+	}
 	
 	static func + (left: Vec3, right: Vec3) -> Vec3 {
        return Vec3(left.x() + right.x(), 
@@ -58,6 +64,10 @@ extension Vec3 {
 	static func * (left: Vec3, _ t: Double) -> Vec3 {
 	   return Vec3(left.x() * t, left.y() * t, left.z() * t)
 	}
+
+	static func * (scalar: Double, vec: Vec3) -> Vec3 {
+        return vec * scalar
+    }
 
 	static func *= (left: inout Vec3, _ t: Double) {
 		left = left * t
